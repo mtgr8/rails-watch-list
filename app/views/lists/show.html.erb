@@ -1,0 +1,29 @@
+<h1>List Show</h1>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1336937059/photo/film-reels-on-black-background-movie-video-and-cinema-prodaction-and-edition-concept.jpg?b=1&s=170667a&w=0&k=20&c=3Y_OD6qSJIP-9DNcNk-yIZ7CrcOJOLpFr2jfWIbegZA=);">
+  <div class="container text-center">
+    <h1><%= @list.name %></h1>
+  </div>
+</div>
+
+<div class="container_small mt-5">
+  <div class="d-flex justify-content-end">
+    <%= link_to "Create new movie", new_list_bookmark_path(@list), class: "btn_create" %>
+  </div>
+  <div class="grid d-flex col-2">
+    <% @list.bookmarks.each do |bookmark| %>
+    <%= bookmark.movie.title %>
+    <%= bookmark.comment %>
+    <% end %>
+  </div>
+  <div class="card-trip">
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<h1>List#new</h1>
+<p>Find me in app/views/list/new.html.erb</p>
+
+<%= simple_form_for  @list do |f| %>
+  <%= f.input :name %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+<% end %>
